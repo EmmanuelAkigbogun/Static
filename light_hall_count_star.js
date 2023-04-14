@@ -3,7 +3,7 @@
             //s is element clicked 
             //function calle when you click each grid_items button with a (background image)
             f=(s)=>{
-                total=0;
+                total=0;//
                 //number for counting similar class
                 static_count=0;
                 document.querySelectorAll('.grid_items').forEach(el=>{
