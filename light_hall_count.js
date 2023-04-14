@@ -66,6 +66,8 @@
                 /*initialize buttons*/
                 document.querySelectorAll('.number')[flexowrapnumber].innerHTML="0";
                 flexowrapnumber++;
+                // to prevent error after reset for undefined
+                f(document.querySelectorAll('.flexowrap')[0])
             })
             total=1;
             total_count.innerHTML="Total: 0"
