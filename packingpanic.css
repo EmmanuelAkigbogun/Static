@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
  
 
@@ -70,13 +69,14 @@
   display: flex;
    justify-content: center;
    width: 100vw;
-   background-color: rgb(245, 245, 245);
+   background-color: #f8f8f8;
   }
   .inner_image_grid3col{ 
   margin: 1.1em;
    flex: 1 1 0%;
    display: flex;
    justify-content: center;
+   background-color: #f8f8f8;;
   }
   .semi_image_grid3col{ 
   position: absolute;
@@ -85,7 +85,7 @@
    aspect-ratio: 1 / 1;
    display: flex;
    justify-content: center;
-   background-color: rgb(245, 245, 245);
+   background-color: #f8f8f8;
   }
   .outer_image_grid3col{ 
    position: relative;
@@ -167,6 +167,7 @@
   .inputs{ 
   height: 59px;
   padding-left: 1.4em;
+  outline: transparent solid 1px;
   }
   .inputs::placeholder{ 
    font-size: 1rem;
@@ -264,7 +265,7 @@
   width: 86vw;
    display: grid;
    grid-template-columns: repeat(auto-fit,minmax(450px, 1fr));
-   grid-auto-rows: 700px;
+   grid-auto-rows: 530px;
   }
   .problo{ 
   font-size: 1rem;
@@ -392,11 +393,8 @@
    align-items: flex-end;
   }
   #thirdgridempty{ 
-   height: 24.5%;
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-end;
-   font-family: 'Nunito Sans', sans-serif;
+   height: 4.5em;
+
   }
   #footiconconta{ 
    display: flex;
@@ -413,6 +411,7 @@
    border: 0px solid;
    margin-left: 0.1rem;
    flex: 1 1 0%;
+   outline: transparent solid 1px;
    color: rgb(255, 255, 255);
   font-family: 'Nunito', sans-serif;
   }
@@ -676,7 +675,7 @@
   width: 100vw;
   display: flex;
    justify-content: center;
-  background-color: rgb(245, 245, 245);
+  background-color: #f8f8f8;
   }
   #hereeveryth{ 
   font-family: 'Nunito Sans', sans-serif;
@@ -820,7 +819,7 @@
   height: 465px;
    width: 100vw;
    padding-top: 6.3em;
-   background-color: rgb(245, 245, 245);
+   background-color: #f8f8f8;
   }
   #Packingmobnav{ 
   width: 200px;
@@ -838,18 +837,18 @@
     width: 100vw;
     background-size: cover;
     background-position: right center;
-    background: url("./images/Hero\ Image\ 1xx.png");
+    background: url("./images/hero-image-1xx.png");
     animation: infinite emmanuel 16s step-end;
    }
 /* media guys*/    
    @keyframes emmanuel{
      0%{
-       background: url("./images/Hero\ Image\ 1xx.png");
+       background: url("./images/hero-image-1xx.png");
        background-size: cover;
     background-position: right center;
      }
      50%{
-       background-image: url("./images/Hero\ Image\ 1x.png");
+       background-image: url("./images/hero-image-1x.png");
        background-size: cover;
     background-position: right center;
      }
@@ -889,18 +888,18 @@
                  display: none;
                }
                #header-section{
-    background: url("./images/Hero\ image\ mobile\ \(1\).png");
+    background: url("./images/hero-image-mobile-\(1\).png");
     animation: infinite emmanuelmob 16s step-end;
    }
    @keyframes emmanuelmob{
      0%{
-       background: url("./images/Hero\ image\ mobile\ \(1\).png");
+       background: url("./images/hero-image-mobile-\(1\).png");
        background-size: cover;
        background-repeat: no-repeat;
     background-position: center center;
      }
      50%{
-       background-image: url("./images/Hero\ image\ mobile\ \(2\).png");
+       background-image: url("./images/hero-image-mobile-\(2\).png");
        background-size: cover;
        background-repeat: no-repeat;
     background-position: center center;
@@ -931,9 +930,33 @@
                  width: 38px;
                  height: 38px;
                }
-                    #thirdgrid{
-                     grid-auto-rows: 600px;
+                  #thirdgrid{
+                     grid-auto-rows: 470px;
                     }
+
+                    #thirdgridempty{ 
+                      height: 3em;
+                     }
+             }
+             @media (max-width:840px){
+              html{
+             font-size:11.2px ;
+              }
+                  #travelerslove{width: 400px;}
+                  #keepintouchrel{padding-bottom: 5em;}
+
+            }
+
+             
+             @media (max-width:650px) {
+              #thirdgrid{
+                grid-auto-rows: 440px;
+               }
+               #thirdgridempty{ 
+                height: 3em;
+               
+               }
+              
              }
              @media (max-width:540px){
                #secondgrid{
@@ -941,42 +964,58 @@
                }
                    #bethefirst{ 
                    width: 95%; 
-                    height: auto;
                     }
                     #thirdgrid{
-                     grid-auto-rows: 500px;
-                    }
+                      grid-auto-rows: 380px;
+                     }
+                     #thirdgridempty{ 
+                      height: 0em;
+                     }
+                     #keepintouchrel{padding-bottom: 0em;}
              }
-             @media (max-width:380px){
-               #firstgrid{
-                 grid-template-columns: repeat(1,1fr);
-               }
-               #travelerslove{width: 90%;}
-             }
-             @media (max-width:400px){
-               #stressingout{ 
-                 width: 95%;
-               }
-               #pickyourdes,#ourvision{width: auto;}
-               #thirdgrid{
-                     grid-auto-rows: 450px;
-                    }
-             }
+
+    
+          
+      
              @media (max-width:500px){
                #thirdgrid{
                  grid-template-columns: repeat(1,1fr);
                }
-             }
-             @media (max-width:840px){
-               html{
-              font-size:11.2px ;
+               #thirdgrid{
+                grid-auto-rows: 355px;
                }
-                   #travelerslove{width: 400px;}
              }
+           
+             @media (max-width:400px){
+              #stressingout{ 
+                width: 95%;
+              }
+              #pickyourdes,#ourvision{width: auto;}
+              #thirdgrid{
+                    grid-auto-rows: 350px;
+                   }
+            }
+
+             @media (max-width:380px){
+              #firstgrid{
+                grid-template-columns: repeat(1,1fr);
+              }
+              #travelerslove{width: 90%;}
+
+              #thirdgrid{
+                grid-auto-rows: 340px;
+               }
+            }
+
+            @media (max-width:340px){
+              #thirdgrid{
+                grid-auto-rows: 320px;
+               }
+            }
              @media (max-width:260px){
              #lightwei-container{margin-top: 100px;}
-             #thirdgrid{
-                     grid-auto-rows: 430px;
+           #thirdgrid{
+                     grid-auto-rows: 300px;
                     }
              }
    
