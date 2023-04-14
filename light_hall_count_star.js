@@ -47,7 +47,6 @@
                 el.appendChild(love);
                 love.appendChild(love_img);
                 love.className="item_count";
-                love_img.className="item_count";
                  /*all count divs are checked if they have data from the past*/
                 if(window.localStorage.getItem('object_tracker'+flexowrapnumber)!=undefined){
                      /*past data are restored*/
