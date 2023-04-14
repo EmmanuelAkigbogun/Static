@@ -222,6 +222,6 @@
             }
             @media (max-width: 230px) {
                 .flexowrap {
-                    background-position: right !important;
+                    background-position: right;
                 }
             }
