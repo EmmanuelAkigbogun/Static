@@ -38,9 +38,6 @@
                  /*allbutton are given a click event*/
                 el.onclick=(e)=>{
                     f(e.target);      
-                    file_name.innerHTML="Last Clicked Image :<wbr> "+getComputedStyle(e.target).backgroundImage
-                    .split('/')[getComputedStyle(e.target).backgroundImage.split('/').length-1]
-                    .replaceAll('"',"").replaceAll(')',"").replaceAll(".jpg","").replaceAll(".jpeg","")
                 }
                 /*all count output and icons are created and appended to  button*/
                 love=document.createElement('output');
