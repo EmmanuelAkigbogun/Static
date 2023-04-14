@@ -66,8 +66,11 @@
                 /*initialize buttons*/
                 document.querySelectorAll('.number')[flexowrapnumber].innerHTML="0";
                 flexowrapnumber++;
-                // to prevent error after reset for undefined
-                f(document.querySelectorAll('.flexowrap')[0])
+                // to prevent error after reset for not defining object and storage
+                f(document.querySelectorAll('.flexowrap')[0]);
+                staticObject['object_tracker'+0]=0;
+                document.querySelectorAll('.number')[0].innerHTML="0"
+                 window.localStorage.setItem('object_tracker'+0,staticObject['object_tracker'+0]);
             })
             total=1;
             total_count.innerHTML="Total: 0"
@@ -98,28 +101,6 @@
                  addFunction()
             }
             
-            window.onload=()=>{
-                if(window.innerWidth<1110){
-                   dark=new Image;
-                   dark.style.fontSize="3rem"
-                   dark.style.width="95vw"
-                   dark.style.height="95vh"
-                   dark.style.position="fixed"
-                   dark.style.top="0px"
-                   dark.style.bottom="0px"
-                   dark.style.zIndez="80000"
-                   dark.style.display="flex"
-                   dark.style.justifyContent="center"
-                   dark.style.alignItems="center"
-                   dark.style.color="#fff"
-                   dark.style.backgroundColor="#000"
-                   dark.alt=" for better view Open on Desktop"
-                   document.body.appendChild(dark)
-                }
-                setTimeout(() => {
-                    dark.remove()
-                }, 5000);
-            }
             
             
             /*not relevant to the project  gives nav a color of section entered on scroll*/
