@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+    </head>
+    <body>    
+        <style id="styla" title="">
+            #i{
+             color:red;   
+            }
+            .but{
+                background-color: rgb(255, 153, 0);
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 255, 255);
+                width: 150px;
+                height: 50px;
+                border-radius: 12px;
+                outline: rgb(255, 153, 0) solid 1px;
+                animation-name: ani;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            .form{
+                background-color: rgb(128, 128, 128);
+                width: 400px;
+                height: 350px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+            .width{
+                width: 45%;
+                height: 48px;
+            }
+            .input{
+                width: 100%;
+            }
+        </style> 
+        <style id="mediala"></style> 
+        <style id="keyframasio">
+            @keyframes ani{
+                0%{
+                    transform: translate(0px, 0px);
+                }
+                50%{
+                    transform: translate(0px, 250px);
+                }
+                100%{
+                    transform: translate(0px, 0px);
+                }
+            }
+        </style> 
+        <button id="i" class="but">Animation Button</button>
+        <form id="i" class="form" target="_self">
+            <input id="i" placeholder="☆♥†♠" class="width input">    
+            <button id="i"  class="width">Button</button> 
+        </form>
+        <script>
+            alert(i.length);
+           //for (e of i) {}
+           s="i";
+           eval("alert("+s+'.length'+")");
+        </script>
+    </body>
+</html>
