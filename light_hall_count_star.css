@@ -67,7 +67,7 @@
                 align-items: center;
                 width: 24px;
                 height: 24px;
-                background-image: url(Images/day.png);
+                background-image: url(images/day.png);
                 background-color: #FFFFFF;
                 border: none;
                 outline: none;
@@ -286,10 +286,10 @@ Form Styling Starts
                     height: 24px;
                     border: none;
                     outline: none;
-                    background-image: url('Images/hamburger.png');
+                    background-image: url('images/hamburger.png');
                 }
                 #logo_container #icon_hamburger {
-                    background-image: url('Images/close.png');
+                    background-image: url('images/close.png');
                 }
                 #menu_container {
                     display: flex;
