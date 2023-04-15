@@ -54,7 +54,7 @@
                 love.onclick=(ev)=>{ev.target.parentElement.click()
                 setTimeout(() => {
                       document.querySelector('.file_name').innerHTML="Last Clicked Image :<wbr>  love";
-                }, 100);
+                }, 10);
                 
                 ;}
                 el.appendChild(love);
