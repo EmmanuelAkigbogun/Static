@@ -32,7 +32,7 @@
           clickguy(products);
           clickguy(ourpartners);
           //desktop zoom on hover
-
+          //moouse over
           mouseoveroutdesktopguy=(prokind,darkpartkind)=>{
               prokind.onmouseover=()=>{darkpartkind.style.display="initial"}
               prokind.onmouseout=()=>{darkpartkind.style.display=""}
