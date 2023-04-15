@@ -36,20 +36,27 @@
                 total_count.innerHTML = ` ${total} `;
             }
             /*everytime page loads seting required definitions*/
-            flexowrapnumber=0;
+            flexowrapnumber=0;justString="";
             document.querySelectorAll('.grid_items').forEach(el=>{
                 /*allbutton are given a click event*/
                 el.onclick=(e)=>{
-                    f(e.target);
-                    file_name.innerHTML="Last Clicked Image :<wbr> "+getComputedStyle(e.target).backgroundImage
+                    justString="Last Clicked Image :<wbr> "+getComputedStyle(e.target).backgroundImage
                     .split('/')[getComputedStyle(e.target).backgroundImage.split('/').length-1]
-                    .replaceAll('"',"").replaceAll(')',"").replaceAll(".jpg","").replaceAll(".jpeg","")
+                    .replaceAll('"',"").replaceAll(')',"").replaceAll(".jpg","").replaceAll(".jpeg","");
+                    document.querySelector('.file_name').innerHTML=justString
+                    f(e.target);
                 }
                 /*all count output and icons are created and appended to  button*/
                 love=document.createElement('output');
                 love_img=new Image
                 love_img.src="images/love.png";
                 love_img.setAttribute("alt","love icon");
+                love.onclick=(ev)=>{ev.target.parentElement.click()
+                setTimeout(() => {
+                      document.querySelector('.file_name').innerHTML="Last Clicked Image :<wbr>  love";
+                }, 100);
+                
+                ;}
                 el.appendChild(love);
                 love.appendChild(love_img);
                 love.className="item_count";
