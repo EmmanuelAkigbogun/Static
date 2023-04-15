@@ -759,7 +759,15 @@
   #gridtemarea{ 
   display: grid;
    width: 60vw;
-   grid-template-areas: 'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0' 'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0' 'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0' 'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23' 'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23' 'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23' 'eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48' 'eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48' '. . . . . . .';
+   grid-template-areas: 'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0'
+                        'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0'
+                        'eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0 eaaaa0' 
+                        'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23'
+                        'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23'
+                        'eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23 eaaa23' 
+                        'eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48' 
+                        'eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48 eaaa48'
+                        '   .      .      .      .      .      .      .  ';
    flex: 1 1 0%;
   }
   #gridareapartbut{ 
