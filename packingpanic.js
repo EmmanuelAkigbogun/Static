@@ -1,4 +1,4 @@
-          //ham burger menue
+          //ham burger menu
            alreadyopen=false;
           idnavopener.onclick=()=>{
               navmenue.style.display="flex";
