@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>document</title>
-    </head>
-    <body>
-        <style> 
-            .duck {
-                padding: 20px;
-                margin: 10px;
-                font-size: 3rem;
-                border-radius: 10px;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="i" ></textarea>
+     <button id="im" onclick="f()">click</button>
+    <script>
+        document.getElementById('im').onclick=()=>{
+            a=true;
+            window.SpeechRecognition=window.webkitSpeechRecognition;
+            const b= new SpeechRecognition();
+             b.lang="en-us"
+            b.interimResults=true;
+            console.log(b)
+              b.addEventListener('result', function(e){
+                const transcript=Array.from(e.results)
+                .map(result=>result[0])
+                .map(result=>result.transcript)
+                console.log(transcript)
+                  i.innerHTML=transcript
+              })
+            if(a){
+                b.start();
             }
-        </style>
-        <button id="speak" class="duck">button</button>
-        <div id="textarea" class="duck">div</div>
-        <script>
-            var speak = document.getElementById("speak");
-             var textarea= document.getElementById("textarea");
-            var SpeechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition;
-            var recognition= new SpeechRecognition();
-            speak.addEventListener('click', function (){
-                recognition.start();
-                textarea.innerHTML="....SPEAKING";
-            })
-            recognition.onresult= function(e){
-                console.log(e)
-                var transcript =e.result[0][0].transcript;
-                textarea.innerHTML=transcript;
-            }
-        </script>
-    </body>
+        }
+    </script>
+</body>
 </html>
