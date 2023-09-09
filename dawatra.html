@@ -1,1 +1,92 @@
-you
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            display: flex;
+            justify-content: center;
+        }
+        #t{
+            width: 85vw;
+            height: 80vh;
+            background-color: purple;
+            color: white;
+        }
+        #t::placeholder{
+            color: white;
+            font-size: 1rem;
+        }
+        .c{
+            background-color: purple;
+            color: white;
+            width: 25vw;
+            height: 7vh;
+            font-size: 1rem;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body class="b">
+    <section>
+        <textarea id="t" placeholder="speech to text" ></textarea>
+        <section class="b">
+            <button id="s" class="c">start</button>
+            <button id="c" class="c">copy</button>
+            <button id="e" class="c">stop</button>
+        <section>
+    <section>
+    <script>
+        a="";
+        j=[];
+        happy=(x)=>{
+            navigator.clipboard.writeText(x);
+        }
+        c.onclick=()=>{
+            happy(t.innerHTML)
+        }
+        s.onclick=()=>{
+            t.innerHTML="";
+            window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const r= new SpeechRecognition();
+            r.lang="en-us"
+            r.interimResults=true;
+            console.log(r)
+            r.onresult=(e)=>{
+                const transcript=Array.from(e.results)
+                .map(result=>result[0])
+                .map(result=>result.transcript)
+                .join("");
+                console.log(transcript);
+                j=a.split("\n");
+                k=[];
+                for(i of j){
+                   if(i.trim()==""){
+                   }
+                   else{
+                       k.push(i);
+                   }
+                }
+                a=k.join("\n");
+                t.innerHTML=a+"\n"+transcript;
+            }
+            r.onend=()=>{
+                r.start();
+                a=t.innerHTML;
+            }
+            e.onclick=()=>{
+                a="";
+                t.innerHTML="";
+            }
+            r.start();
+            t.onkeyup=()=>{
+                r.start();
+                a=t.innerHTML;
+            }
+        }
+    </script>
+</body>
+</html>
