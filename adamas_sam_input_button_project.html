@@ -68,7 +68,6 @@
                 .map(result=>result.transcript)
                 .join("");
                 console.log(transcript);
-                if(a!=""){
                 j=a.split("\n");
                 k=[];
                 for(i of j){
@@ -79,9 +78,14 @@
                    }
                 }
                 a=k.join("\n");
-                }
+                
                if(g){
+if(a==""){
+ t.innerHTML=transcript;
+}
+else{
  t.innerHTML=a+"\n"+transcript;}
+}
             }
             r.onend=()=>{
                 if(g){
