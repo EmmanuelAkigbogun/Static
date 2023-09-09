@@ -109,8 +109,9 @@ else{
             v.innerHTML="Speak...";
             r.start();
         }
-        t.onkeyup=()=>{
-            t.innerHTML= a;
+        t.onkeyup=(ev)=>{
+            ev.preventDefault();
+            ev.stopPropagation();
         }
     </script>
 </body>
