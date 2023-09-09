@@ -78,16 +78,14 @@
                    }
                 }
                 a=k.join("\n");
-                t.innerHTML=a+"\n"+transcript;
+               if(g){
+ t.innerHTML=a+"\n"+transcript;}
             }
             r.onend=()=>{
                 if(g){
                     v.innerHTML="Speak...";
                     r.start();
                     a=t.innerHTML;
-                }
-                else{
-                    a="";
                 }
             }
             e.onclick=()=>{
