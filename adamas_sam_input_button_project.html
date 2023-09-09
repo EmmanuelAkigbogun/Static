@@ -109,6 +109,11 @@ else{
             v.innerHTML="Speak...";
             r.start();
         }
+        t.onkeydown=(ev)=>{
+            ev.preventDefault();
+            ev.stopPropagation();
+        }
+        
         t.onkeyup=(ev)=>{
             ev.preventDefault();
             ev.stopPropagation();
