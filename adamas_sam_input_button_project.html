@@ -80,7 +80,9 @@
                 a=k.join("\n");
                 
                if(g){
- t.innerHTML=a+"\n"+transcript;}
+if(a==""){ t.innerHTML=transcript}
+else{
+ t.innerHTML=a+"\n"+transcript;}}
 
             }
             r.onend=()=>{
