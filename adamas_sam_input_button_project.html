@@ -12,7 +12,7 @@
         }
         #t{
             width: 85vw;
-            height: 80vh;
+            height: 70vh;
             background-color: purple;
             color: white;
         }
@@ -33,6 +33,7 @@
 <body class="b">
     <section>
         <textarea id="t" placeholder="speech to text" ></textarea>
+        <section id="v"></section>
         <section class="b">
             <button id="s" class="c">start</button>
             <button id="c" class="c">copy</button>
@@ -46,7 +47,8 @@
             navigator.clipboard.writeText(x);
         }
         c.onclick=()=>{
-            happy(t.innerHTML)
+            happy(t.innerHTML);
+            alert("copied");
         }
         s.onclick=()=>{
             t.innerHTML="";
