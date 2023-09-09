@@ -80,12 +80,8 @@
                 a=k.join("\n");
                 
                if(g){
-if(a==""){
- t.innerHTML=transcript;
-}
-else{
  t.innerHTML=a+"\n"+transcript;}
-}
+
             }
             r.onend=()=>{
                 if(g){
@@ -105,6 +101,7 @@ else{
             v.innerHTML="Speak...";            
             r.start();
             t.onkeyup=()=>{
+                r.start();
                 a=t.innerHTML;
             }
         }
