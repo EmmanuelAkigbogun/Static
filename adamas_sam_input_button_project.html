@@ -46,6 +46,7 @@
     <script>
         a="";
         j=[];
+        g=false;
         happy=(x)=>{
             navigator.clipboard.writeText(x);
         }
@@ -55,6 +56,7 @@
         }
         s.onclick=()=>{
             t.innerHTML="";
+            g=true;
             window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             const r= new SpeechRecognition();
             r.lang="en-us"
@@ -79,14 +81,18 @@
                 t.innerHTML=a+"\n"+transcript;
             }
             r.onend=()=>{
-                v.innerHTML="Speak...";
-                r.start();
-                a=t.innerHTML;
+                if(g==true){
+                    v.innerHTML="Speak...";
+                    r.start();
+                    a=t.innerHTML;
+                }
             }
             e.onclick=()=>{
                 a="";
                 t.innerHTML="";
                 v.innerHTML="";
+                g=false;
+
             }     
             v.innerHTML="Speak...";            
             r.start();
