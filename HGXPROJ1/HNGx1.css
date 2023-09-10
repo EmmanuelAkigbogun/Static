@@ -1,4 +1,5 @@
-.image {
+.image {
+
     border-radius: 22px;
     max-width:350px;
     width:80vw;
@@ -6,4 +7,7 @@
 .center {
     display: flex;
     justify-content: center;
+}
+output{
+    margin-top:5px;
 }
