@@ -5,7 +5,5 @@ var dayValue = date.toLocaleString("en-us",{
     weekday:"long"
 });
 var timeUTCValue = date.getTime();
-day.innerHTML=day.innerHTML
-.split(":")[0] +": "+ dayValue
-timeUTC.innerHTML=timeUTC.innerHTML
-.split(":")[0] +": "+ timeUTCValue;
+day.innerHTML=dayValue
+timeUTC.innerHTML=timeUTCValue;
