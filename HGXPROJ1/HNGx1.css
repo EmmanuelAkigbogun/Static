@@ -1,6 +1,6 @@
-.image {
-    width: 25vw;
+.image {
     border-radius: 22px;
+    height:50vh
 }
 .center {
     display: flex;
