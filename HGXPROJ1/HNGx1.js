@@ -4,7 +4,7 @@ const date = new Date();
 var dayValue = date.toLocaleString("en-us",{
     weekday:"long"
 });
-var timeUTCValue = date.getUTCMilliseconds();
+var timeUTCValue = date.getTime();
 day.innerHTML=day.innerHTML
 .split(":")[0] +": "+ dayValue
 timeUTC.innerHTML=timeUTC.innerHTML
