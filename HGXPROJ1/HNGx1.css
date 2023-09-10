@@ -1,6 +1,7 @@
 .image {
     border-radius: 22px;
-    height:50vh
+    max-width:350px;
+    width:80vw;
 }
 .center {
     display: flex;
