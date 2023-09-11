@@ -4,6 +4,6 @@ const date = new Date();
 var dayValue = date.toLocaleString("en-us",{
     weekday:"long"
 });
-var timeUTCValue = date.gettime();
+var timeUTCValue = date.getTime();
 day.innerHTML=dayValue;
 timeUTC.innerHTML=timeUTCValue;
