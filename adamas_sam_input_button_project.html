@@ -292,14 +292,18 @@
                 a=t.value;
         }
         c.onclick=()=>{
+         z=v.innerHTML;
          if(t.value!=""){
             happy(t.value);
-            z=v.innerHTML;
             v.innerHTML="copied";
-            setTimeout(()=>{
+         }
+         else{
+           v.innerHTML="nothing to copy";
+         }
+         
+         setTimeout(()=>{
             v.innerHTML=z;
-            },2000)
-            }
+            },2000)        
         }
         t.style.font=getComputedStyle(c).font;
     </script>
