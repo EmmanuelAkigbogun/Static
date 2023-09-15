@@ -168,15 +168,15 @@
                   c.innerText=zed;
                    if(zed!=""){
                   if(t.selectionStart==t.selectionEnd){
-                  if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
+                  if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart-1,t.selectionEnd).includes("\n")&&t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
                    t.setRangeText(" "+zed,t.selectionStart,t.selectionEnd);
                  t.setSelectionRange(t.selectionStart+(" "+zed).length,t.selectionStart+(" "+zed).length);
                    }
-                  else if(t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
+                  else if(t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes("\n")){
                     t.setRangeText(zed+" ",t.selectionStart,t.selectionEnd);
                                      t.setSelectionRange(t.selectionStart+(" "+zed).length,t.selectionStart+(" "+zed).length);
                     }
-                  else if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
+                  else if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart-1,t.selectionEnd).includes("\n")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes("\n")){
                      t.setRangeText(" "+zed+" ",t.selectionStart,t.selectionEnd);
                                                    t.setSelectionRange(t.selectionStart+(" "+zed+" ").length,t.selectionStart+(" "+zed+" ").length);
                     }
@@ -309,6 +309,10 @@
              if(g){
                  s.click();
              }
+             t.selectionStart=t.value.length;
+            t.selectionEnd=t.selectionStart;
+            t.focus();
+            t.blur();
         }
         t.style.font=getComputedStyle(c).font;
     </script>
