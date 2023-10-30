@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zephyr@&spades;&star;&hearts;&dagger;</title>
+    <title>Static&spades;&star;&hearts;&dagger;</title>
     <style>
         .b{
             display: flex;
@@ -12,10 +12,9 @@
         }
         #t{
             width: 85vw;
-            height: 69vh;
+            height: 70vh;
             background-color: purple;
             color: white;
-      
         }
         #t::placeholder{
             color: white;
@@ -51,17 +50,17 @@
 <body class="b">
     <section>
         <textarea id="t" placeholder="speech to text"></textarea>
-         <section id="v" class="v"></section>
-        <section class="b">
-               <button id="sw" class="c">words</button>
-              <button id="sl" class="c">line</button>
-              <button id="l" class="c">last line(s)</button>
-        </section>
+        <section id="v" class="v"></section>
         <section class="b">
             <button id="s" class="c">start</button>
             <button id="c" class="c">copy</button>
             <button id="e" class="c">stop</button>
     </section>
+            <section class="b">
+              <button id="l" class="c">last line(s)</button>
+              <button id="sl" class="c">line</button>
+              <button id="sw" class="c">words</button>
+        </section>
     </section>
     <script>
         a="";
@@ -72,7 +71,6 @@
         sp=true;
         nl=true;//all 
         spnl=false;
-        strand="";
         z="";
         zed="";
         selectFunction=(x,boolis)=>{
@@ -99,7 +97,6 @@
         toggFunc=(sls,sws)=>{
             if(sls.classList.contains("tc")){
                 sls.classList.remove("tc");
-                strand="";
                 spnl=false;//none
                 
             }
@@ -169,15 +166,15 @@
                   c.innerText=zed;
                    if(zed!=""){
                   if(t.selectionStart==t.selectionEnd){
-                  if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart-1,t.selectionEnd).includes("\n")&&t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
+                  if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
                    t.setRangeText(" "+zed,t.selectionStart,t.selectionEnd);
                  t.setSelectionRange(t.selectionStart+(" "+zed).length,t.selectionStart+(" "+zed).length);
                    }
-                  else if(t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes("\n")){
+                  else if(t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
                     t.setRangeText(zed+" ",t.selectionStart,t.selectionEnd);
                                      t.setSelectionRange(t.selectionStart+(" "+zed).length,t.selectionStart+(" "+zed).length);
                     }
-                  else if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart-1,t.selectionEnd).includes("\n")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes("\n")){
+                  else if(!t.value.slice(t.selectionStart-1,t.selectionEnd).includes(" ")&&!t.value.slice(t.selectionStart,t.selectionEnd+1).includes(" ")){
                      t.setRangeText(" "+zed+" ",t.selectionStart,t.selectionEnd);
                                                    t.setSelectionRange(t.selectionStart+(" "+zed+" ").length,t.selectionStart+(" "+zed+" ").length);
                     }
@@ -194,7 +191,7 @@
             c.innerText="copy"
            },10);
             }
-                  v.innerHTML=strand+" Speak...";
+                    v.innerHTML="Speak...";
                     r.start();
                     a=t.value;
                 }
@@ -209,34 +206,23 @@
                 s.classList.remove("tc");
                 }
             }    
-            v.innerHTML=strand+" Speak...";
+            t.onkeyup=()=>{
+                a=t.value;
+            }
+            v.innerHTML="Speak...";
             r.start();
         }
         sl.onclick=()=>{
-            strand="click a line to change it. ";
             toggFunc(sl,sw);
             gibby=false;
              t.value=" "+t.value;
             t.value=t.value.replace(" ","");
-            if(g){
-            v.innerHTML=strand+" Speak..."
-            }
-            else{
-             v.innerHTML=strand;
-            }
         }
         sw.onclick=()=>{
-            strand="click a word to change it. ";
             toggFunc(sw,sl);
             gibby=false;
-            t.value=" "+t.value;
+             t.value=" "+t.value;
             t.value=t.value.replace(" ","");
-            if(g){
-            v.innerHTML=strand+" Speak...";
-            }
-            else{
-             v.innerHTML=strand;
-            }
         }
         l.onclick=()=>{
                 if(!sl.classList.contains("tc")){
@@ -248,9 +234,6 @@
                 else{
                 selectFunction(t.value.length,true);
                 }
-                if(t.value.endsWith("\n")){
-                t.value=t.value.slice(0,t.value.length-1);
-                };
                 t.focus();
                 gibby=false;
         }
@@ -258,26 +241,10 @@
             selectFunction(t.selectionStart,false);
         }
         t.onselect=()=>{
-            c.innerText=t.value.slice(t.selectionStart,t.selectionEnd);
+            c.innerText=t.value.slice(t.selectionStart,t.selectionEnd)
             setTimeout(()=>{
             c.innerText="copy"
             },1000);
-            if(spnl){
-                if(!sp){
-                strand='change "'+t.value.slice(t.selectionStart,t.selectionEnd)+'"';
-                if(strand.length>37){
-                strand=strand.slice(0,33)+'..."';
-                }
-                v.innerHTML=strand;
-                }
-                else{
-                strand='change line '+t.value.slice(0,t.selectionStart).split("\n").length;
-                       if(strand.length>37){
-                strand=strand.slice(0,33)+"...";
-                }
-                v.innerHTML=strand;
-                }
-            }
             gibby=true;
         }
         t.onblur=()=>{
@@ -286,34 +253,17 @@
         t.onfocus=()=>{
             gibby=true;
         }
-        t.onkeyup=()=>{
-                a=t.value;
-            }
-        t.oninput=()=>{
-                a=t.value;
-        }
         c.onclick=()=>{
-         z=v.innerHTML;
          if(t.value!=""){
             happy(t.value);
+            z=v.innerHTML;
             v.innerHTML="copied";
-         }
-         else{
-           v.innerHTML="nothing to copy";
-         }
-         
-         setTimeout(()=>{
+            setTimeout(()=>{
             v.innerHTML=z;
-            },2000)        
+            },2000)
+            }
         }
-         window.ondeviceorientation=()=>{
-             if(g){
-                 s.click();
-             }
-             t.selectionStart=t.value.length;
-            t.selectionEnd=t.selectionStart;
-        }
-        t.style.font=getComputedStyle(c).font;
+        t.style.font=getComputedStyle(c).font;        
     </script>
 </body>
 </html>
