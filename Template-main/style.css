@@ -1,0 +1,1856 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    color-scheme: dark light;
+}
+
+:root{
+        /*Color Styles*/
+
+        --white: #FCFCFA;
+        --black: #1E1D1C;
+        --grey-light: #EDEDDE;
+        --grey-dark: #5C5C4F;
+        --light-overlay: #5C5C4F55;
+        --dark-overlay: #1E1D1C90;
+        --thin-overlay: #5C5C4F20;
+        --red: #C11212;
+        --blend: multiply;
+    
+
+    
+        /*Spacing*/
+
+        --navHeightDesktop: 64px;
+        --navHeightMobile: 56px;
+        --visibleHeightDesktop: calc(100vh - var(--navHeightDesktop)); 
+        --visibleHeightMobile: calc(100vh - var(--navHeightMobile));
+
+        
+        /*Typography*
+    
+    --weight-regular: 400;
+    --weight-medum : meduium;
+    --weight-light: light;
+    
+    --font-size-64: 64px;
+    --font-size-48: 48px;
+    --font-size-40: 40px; 
+    --font-size-32: 32px;
+    --font-size-24: 24px;
+    --font-size-16: 16px;
+    --font-size-14: 14px;
+    --font-size-12: 12px;
+    
+    --line-height-big: 2;
+    --line-height-small: 1.5;
+    --line-height-mid : calc(28 / 18);
+    
+    --font-family-paragraph: "Public Sans", sans-serif;
+    --font-family-heading: "Space Grotesk", sans-serif;
+    --font-family-logo: "Gemunu Libre", sans-serif;
+    
+    
+    
+    
+    
+    --heading4-desktop: var(--weight-regular) var(--font-size-64)/var(--line-height-small) var(--font-family-heading);
+    --heading3-desktop: var(--weight-regular) var(--font-size-48)/var(--line-height-small) var(--font-family-heading);
+    --heading2-desktop: var(--weight-regular) var(--font-size-32)/var(--line-height-small) var(--font-family-heading);
+    --heading1-desktop: var(--weight-regular) var(--font-size-18)/var(--line-height-small) var(--font-family-heading);
+    
+    --heading4-mobile: var(--weight-medium) var(--font-size-40)/var(--line-height-small) var(--font-family-heading);
+    --heading3-mobile: var(--weight-medium) var(--font-size-32)/var(--line-height-small) var(--font-family-heading);
+    --heading2-mobile: var(--weight-medium) var(--font-size-24)/var(--line-height-small) var(--font-family-heading);
+    --heading1-mobile: var(--weight-medium) var(--font-size-16)/var(--line-height-big) var(--font-family-heading);    
+    
+    --paragraph16-bold: var(--weight-medium) var(--font-size-16)/var(--line-height-big) var(--font-family-paragraph);
+    --paragraph14-bold: var(--weight-medium) var(--font-size-14)/var(--line-height-big) var(--font-family-paragraph);
+    --paragraph12-bold: var(--weight-medium) var(--font-size-12)/var(--line-height-big) var(--font-family-paragraph);
+    
+    
+    --paragraph16-light: var(--weight-light) var(--font-size-16)/var(--line-height-big) var(--font-family-paragraph);
+    --paragraph14-light: var(--weight-light) var(--font-size-14)/var(--line-height-big) var(--font-family-paragraph);
+    --paragraph12-light: var(--weight-light) var(--font-size-12)/var(--line-height-big) var(--font-family-paragraph);
+    
+    --logo-large: var(--weight-medium) var(--font-size-24)/var(--line-height-small) var(--font-family-logo);
+    --logo-small: var(--weight-medium) var(--font-size-18)/var(--line-height-small) var(--font-family-logo);
+
+*/
+
+    /*--heading4-desktop
+
+    font-weight: medium;
+    font-size: 64px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+
+    /*--heading3-desktop
+    
+    font-weight: regular;
+    font-size: 48px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+
+    /*--heading2-desktop
+
+    font-weight: regular;
+    font-size: 32px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+
+    /*
+
+    --heading1-desktop
+
+    font-weight: regular;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+    /*
+    
+    --heading4-mobile
+
+    font-weight: medium;
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+    /*
+
+    --heading3-mobile
+
+    font-weight: medium;
+    font-size: 32px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+
+    /*
+
+    --heading2-mobile
+
+    font-weight: medium;
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+
+
+    /*
+
+    --heading1-mobile
+    
+    font-weight: medium;
+    font-size: 16px;
+    line-height:2;
+    font-family: "Space Grotesk", sans-serif;
+
+    */
+
+    
+    /*
+    
+    --paragraph16-bold
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+
+
+    /*
+
+    --paragraph14-bold
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+
+
+    /*
+
+    --paragraph12-bold
+
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+    
+    /*
+
+    --paragraph16-light
+    font-weight: light;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+
+
+    /*
+    
+    --paragraph14-light
+
+    font-weight: light;
+    font-size: 14px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+
+
+    /*
+
+    --paragraph12-light
+
+    font-weight: light;
+    font-size: 12px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+
+    */
+
+
+
+
+    /*
+    
+    --logo-large
+
+    font-weight: medium;
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: "Gemunu Libre", sans-serif;
+
+    */
+
+
+
+    /*
+
+    --logo-small
+
+    font-weight: medium;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Gemunu Libre", sans-serif;
+
+    */
+}
+
+
+
+body, header{
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 16px);
+    background-color: var(--grey-light);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+
+body::webkit-scrollbar{
+    width: 16px;
+}
+
+
+header{
+    height: 140vh;
+    max-height: 900px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vw - 16px);
+    height: var(--navHeightDesktop);
+    padding: 0 5vw;
+    position: fixed;
+    z-index: 5;
+    backdrop-filter: blur(12px);
+}
+
+
+nav button{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+nav button img{
+    content: url(Images/menu.svg);
+    mix-blend-mode: var(--blend);
+
+}
+.nav_img {
+  content: url(Images/menu_white.svg);
+}
+.white {
+  animation: white_color linear;
+  animation-range: contain;
+  animation-timeline: view(0vh 100vh);
+}
+@keyframes white_color {
+  from {
+    zoom: 1.00001;
+  }
+  to {
+    zoom: 1.00001;
+  }
+}
+nav a:first-of-type{ 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: "Gemunu Libre", sans-serif;
+    mix-blend-mode: var(--blend)
+}
+
+nav button p{
+    color: var(--black);
+    mix-blend-mode: var(--blend);
+}
+
+.open{
+    display: flex;
+}
+
+.close{
+    display: none;
+}
+
+.menuPage{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: calc(100vw - 16px);
+    padding: 128px 5VW 64px 5vw;
+    background-color: var(--black);
+    color: var(--white);
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+
+.menuPage > section:first-child{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menuPage > section:last-child{
+    display: flex;;
+    justify-content: space-between;
+    align-items: end;
+    width: calc(90vw - 16px);
+}
+
+.hero1{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 120px 5vw 80px 5vw;
+    height: 100%;
+}
+
+
+.hero1 > section:first-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 30vw;
+    min-width: 320px;
+    height: 100%;
+}
+
+.hero1 h1{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: hidden;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+
+.dynamicHeading{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 96px;
+    overflow-y: hidden;
+    color: var(--red);
+}
+
+.dynamicHeading > span{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    min-width: 600px;
+    animation-duration: 10s;
+    animation-name: swapHeading;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+}
+    
+    
+    @keyframes swapHeading{
+        from{
+            transform: translateY(0) ;
+        }
+
+        to{
+            transform: translateY(calc(-480px));
+        }
+    }
+
+
+.hero1 > section:first-of-type section:first-child{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero1 .button3{
+    top: 70vh;
+    left: calc(55vw - 76px);
+}
+
+.hero1 > section:last-of-type{
+    display: flex;
+    height: 100%;
+    align-items: end;
+}
+
+.hero1 > section:last-of-type img{
+    display: flex;
+    height: auto;
+    width: 40vw;
+    object-fit: cover;
+    content: url(Images/hero1Image.png);
+}
+
+
+main, main > section, footer{
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 16px);
+}
+
+main{
+    gap: 0;
+    margin-top: -var(--navHeightDesktop);
+}
+
+main > section, footer{
+    gap: 32px;
+}
+
+.title1, .title2{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title1{
+    width: 40vw;
+    max-width: 560px;
+    min-width: 480px;
+}
+
+.title2{
+    width: 60vw;
+    max-width: 560px;
+}
+
+
+.title3{
+    width: 35vw;
+    max-width: 540px;
+    height: 100%;
+}
+
+
+
+.button3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes blink {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+.button1 img, .button2 img, button3 img{
+    width: 24px;
+    height: 24px;
+}
+
+.button1{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.fullHeight .button2 > p{
+    width: fit-content;
+}
+
+
+.button3{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 1px dashed var(--black);
+    position: absolute;
+    color: var(--black);
+}
+
+.button3 p{
+    font-weight: light;
+    font-size: 12px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+}
+
+.button2, .button3{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1{
+    flex-direction: row;
+}
+
+.fullHeight, .fullHeightPadded{
+    height: 100vh;
+    max-height: 800px;
+    padding: 64px 5vw;
+    color: var(--white);
+    position: relative;
+}
+
+.fullHeightPadded > h4{
+    color: var(--black);
+}
+
+
+
+.fullHeight > h4{
+    z-index: 2;
+}
+
+
+.fullImage1, .fullImage2, .fullImage3{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.fullImage1{
+    background-image: url(Images/caseImage1.jpg);
+}
+
+.fullImage2{
+    background-image: url(Images/caseImage1.jpg);
+}
+
+
+.fullImage3{
+    background-image: url(Images/caseImage1.jpg);
+    padding: 40px;
+    overflow: hidden;
+}
+
+.fullImage3 .limitParagraph1{
+    z-index: 3;
+}
+
+
+.stickyParent{
+    height: 500vh;
+    min-height: fit-content;
+}
+.stickyHeight{
+    position: sticky;
+    top:0;
+    left: 0;
+}
+
+
+.swapSection{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 3;
+}
+
+.sticky{
+    position: sticky;
+    top: 64px;
+    left: 0;
+}
+
+
+.swapSection::-webkit-scrollbar{
+    display: none;
+}
+
+.swapSection > section{
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    animation-name: swapSectionAnimate;
+    animation-fill-mode: both;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+}
+
+
+
+@keyframes swapSectionAnimate {
+    from{
+        transform: translateX(0%);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.sectionType1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(90vw - 16px);
+    height: 100%;
+    z-index: 2;
+}
+
+.sectionType1 > section:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+.sectionType1 > section:first-child, .sectionType1 > section:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.sectionType1 > section:first-child{
+    align-items: start;
+}
+
+.sectionType1 > section:last-child{
+    align-items: end;
+}
+
+.sectionType1 > section:last-child > p{
+    width: 35vw;
+}
+
+.overlay{
+    width: calc(100vw - 16px);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--dark-overlay);
+    z-index: 0;
+}
+.z_overlay{
+  z-index: -1;
+}
+
+.overlay2{
+    width: calc(90vw - 16px);
+    height: calc(100vh - 187px);
+    max-height: 613px;
+    position: absolute;
+    bottom: 64px;
+    left: 5vw;
+    background-color: var(--dark-overlay);
+    z-index: 1;
+}
+
+
+.singleLeftText{
+    width: calc(100vw - 16px);
+    padding: 64px 5vw;
+ 
+}
+
+
+.sectionType2{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 60vh;
+    max-height: 660px;
+    width: calc(90vw - 16px);
+}
+
+.sectionType2 > section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.sectionType2 > section:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+}
+
+
+.sectionType2 > section:last-child{
+    align-items: end;
+    gap: 24px;
+}
+
+
+.sectionType2 > section:last-child > section:first-child{
+    display: flex;
+    align-items: end;
+    gap: 24px;
+    height: 100%;
+    width: 100%;
+}    
+
+.sectionType2 > section:last-child > section:first-child img:last-child{
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.sectionType2 > section:last-child > section:first-child img:first-child{
+    width: 72px;
+    max-width: 600px;
+}
+
+
+.doubleTextSide, .doubleTextSideWhite{
+    padding: 64px 5vw;
+    color: var(--white);
+    background-color: var(--black);   
+}
+
+.doubleTextSideWhite{
+    padding: 64px 5vw; 
+}
+
+.sectionType3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+}
+
+.sectionType3 .title2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionType3 .title2 h2{
+    text-align: center;
+    text-wrap: wrap;
+}
+
+
+.sectionType3 > section:last-child{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.sectionType3 > section:last-child > img{
+    width: calc(40vw - 64px);
+    height: auto;
+    object-fit: cover;
+}
+
+
+.limitParagraph1{
+    width: 25vw;
+    max-width: 300px;
+}
+
+.limitParagraph2{
+    width: 20vw;
+    max-width: 240px;
+}
+
+.menuPage .limitParagraph2{
+    width: 40vw;
+    max-width: 200px;
+    text-align: right;
+}
+
+
+.limitParagraph3{
+    max-width: 160px;
+}
+
+.horizontalList > section{
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+}
+
+
+.horizontalList > section section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.horizontalList > section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+}
+
+
+
+
+.sectionType3 > section:last-child > section{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    max-height: 560px;
+    text-align: right;
+    justify-content: space-between;
+    align-items: end;
+
+}
+
+
+
+.hero2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: calc(100vw - 16px);
+    padding: 80px 5vw 64px 5vw;
+}
+
+.hero2 > section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.hero2 > section:nth-child(2){
+    height: 80vh;
+    max-height: 560px;
+    background-image: url(Images/Frame\ 1000002995.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.doubleRightText{
+    padding: 64px 5vw;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.doubleRightTextWhite, .doubleLeftTextWhite{
+    padding: 64px 5vw;
+}
+
+
+
+.sectionType4{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sectionType4 > section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+}
+
+.sectionType4 >  section > section{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionType4 .button3{
+    position: static;
+    color: var(--white);
+    border: 2px dashed var(--white);
+}
+
+
+.sectionType4 >  section > section:first-child{
+    gap: 32px;
+}
+
+.sectionType4 >  section > section:first-child section{
+    height: calc(70vh - 152px);
+    width: 40vw;
+    min-width: 520px;
+    background-image: url(Images/Frame\ 1000002993.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.sectionType4 >  section > section:last-child{
+    justify-content: space-between;
+    align-items: end;
+    width: 35vw;
+    height: 70vh;
+    max-height: 720px;
+}
+
+.doubleRightTextWhite .sectionType4 >  section > section:last-child, .doubleLeftTextWhite .sectionType4 >  section > section:last-child{
+    height: 65vh;
+    min-height: 560px;
+}
+
+.doubleRightTextWhite .sectionType4 >  section > section:first-child section, .doubleLeftTextWhite .sectionType4 >  section > section:first-child section{
+    height: 65vh;
+    min-height: 560px;
+    background-image: url(Images/Frame\ 1000002993.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.doubleLeftTextWhite .sectionType4 >  section{
+    flex-direction: row-reverse;
+}
+
+.doubleLeftTextWhite .sectionType4 >  section > section:last-child{
+    flex-direction: column-reverse;
+}
+
+.sectionType4 >  section > section:last-child > p{
+    width: 90%;
+    text-align: right;
+}
+
+.sectionType4 >  section > section:last-child > section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.sectionType4 li, .sectionType5 li{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.sectionType4 ul, .sectionType5 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sectionType5{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.sectionType5 section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+
+
+
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 64px 5vw;
+}
+
+footer > section{
+    display: flex;
+    width: calc(90vw - 16px);
+    height: 60vh;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer > section > section:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer > section > section:first-child img{
+    width: 50%;
+    height: 30vh;
+    max-height: 300px;
+    object-position: center center;
+    object-fit: cover;
+}
+
+footer > section > section:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    text-align: right;
+    height: 100%;
+    width: fit-content;
+}
+
+
+
+footer > section > section:last-child section,  .menuPage > section:last-child > section{
+    display: flex;
+    gap: 24px;
+}
+
+
+
+
+
+h1{
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+
+h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+h4{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif;
+}
+
+li{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 2;
+    font-family: "Public Sans", sans-serif; 
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+@media  screen and (min-height: 880px){
+    .hero1 .button3{
+        top: 480px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+header{
+    height: 70vh;
+}
+
+.dynamicHeading{
+    height: 81px;
+}
+
+.dynamicHeading > span{
+    min-width: 540px;
+}
+    
+    
+    @keyframes swapHeading{
+        from{
+            transform: translateY(0) ;
+        }
+
+        to{
+            transform: translateY(calc(-405px));
+        }
+    }
+
+
+.horizontalList > section{
+    gap: 32px;
+}
+
+.sectionType2{
+    height: 45vh;
+}
+
+.sectionType2 > section:last-child{
+    height: fit-content;
+}
+
+
+.sectionType2 > section:last-child > section:first-child{
+    flex-direction: column;
+    height: fit-content;
+}
+
+.sectionType4 >  section > section:first-child section{
+    width: 30vw;
+    min-width: 400px;
+}
+
+
+.sectionType3 > section:last-child > section {
+    height: 50vh;
+    max-height: 480px;
+}
+
+.doubleRightTextWhite .sectionType4 > section > section:first-child section, .doubleLeftTextWhite .sectionType4 > section > section:first-child section {
+    height: 50vh;
+    min-height: 400px;
+}
+
+.sectionType4 > section > section:last-child {
+    height: 45vh;
+    min-height: 600px;
+}
+
+.title1{
+    width: 35vw;
+    max-width: 480px;
+    min-width: 400px;
+}
+
+footer > section > section:last-child{
+    .limitParagraph2{
+        width: 40vw;
+        max-width: 300px;
+    }
+}
+
+.menuPage{
+
+    padding: 168px 2.5VW 104px 2.5vw;
+}
+
+.menuPage > section:first-child{
+    gap: 24px;
+}
+
+
+.menuPage > section:last-child{
+    width: 95vw;
+}
+
+.menuPage .limitParagraph2{
+    width: 40vw;
+    max-width: 320px;
+    text-align: right;
+}
+
+h1{
+    font-size: 54px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 28px;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+li{
+    font-size: 12px
+}
+
+
+}
+
+
+@media screen and (max-width: 540px) {
+
+body, header{
+    width: 100vw;
+}
+
+body::-webkit-scrollbar{
+    width: auto;
+}
+
+    header{
+    height: fit-content;
+}
+
+main{
+    width: 100vw;
+}
+
+nav{
+    width: 100vw;
+    padding: 0 2.5vw;
+}
+
+nav a:first-of-type{ 
+    font-size: 18px;
+}
+
+
+
+.hero1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 2.5vw 64px 2.5vw;
+    height: 100%;
+    width: 100vw;
+}
+    
+.hero1 .button3{
+        top: 600px;
+}
+
+
+.hero1 > section:last-of-type img{
+    width: 100%;
+}
+
+
+.dynamicHeading{
+    height: 60px;
+}
+
+.dynamicHeading > span{
+    min-width: 430px;
+}
+    
+    
+    @keyframes swapHeading{
+        from{
+            transform: translateY(0) ;
+        }
+
+        to{
+            transform: translateY(calc(-300px));
+        }
+    }
+
+
+.hero2{
+    width: 100vw;
+    padding: 80px 2.5vw 64px 2.5vw;
+}
+
+
+.fullHeight, .fullHeightPadded{
+    padding: 64px 2.5vw;
+}
+
+.sectionType1 > section:last-child > p{
+    width: 50vw;
+}
+
+
+.menuPage{
+    width: 100vw;
+    padding: 168px 2.5VW 104px 2.5vw;
+}
+
+.menuPage > section:first-child{
+    gap: 24px;
+}
+
+
+.menuPage > section:last-child{
+    width: 95vw;
+}
+
+.menuPage .limitParagraph2{
+    width: 40vw;
+    max-width: 160px;
+    text-align: right;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+
+p{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+li{
+    font-size: 8px;
+}
+
+
+.title1{
+    width: 60vw;
+}
+
+.title2{
+ width: 80%;
+}
+
+
+.title3{
+    width: 100%;
+    max-width: fit-content;
+}
+
+.hero2 .title2{
+    width: 50vw;
+}
+
+.hero2 > section:nth-child(2){
+    height: 60vh;
+}
+
+.limitParagraph1 {
+    width: 40vw;
+    max-width: 320px;
+}
+
+.singleLeftText{
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+.sectionType1{
+    width: 95vw;
+}
+
+.sectionType2{
+    height: fit-content;
+    max-height: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 40px;
+    width: 95vw;
+
+}
+
+
+.sectionType2 > section:first-child{
+    gap: 32px;
+    height: fit-content;
+}
+
+.sectionType2 > section:last-child{
+    width: 100%;
+    height: fit-content;
+    justify-content: start;
+    align-items: end;
+    gap: 16px;
+}
+
+
+
+.sectionType2 > section:last-child > section:first-child > img:last-child{
+    width: aut0;
+    height: 40vh;
+}
+
+.sectionType2 > section:last-child > section:first-child > img:first-child{
+    width: 100px;
+    height: auto;
+}
+
+
+.doubleTextSide, .doubleTextSideWhite{
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+
+.sectionType3 > section:last-child{
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+}
+
+.sectionType3 > section:last-child > section {
+    height: fit-content;
+    width: 100%;
+    gap: 24px;
+}
+
+.sectionType3 > section:last-child > img{
+    width: 70%;
+}
+
+
+.horizontalList > section{
+    gap: 16px;
+}
+
+
+.doubleRightText{
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+.sectionType4 > section{
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.sectionType4 .button3{
+    position: absolute;
+    top: 200px;
+    left: calc(50vw - 60px);
+}
+
+.sectionType4 > section > section:last-child{
+    gap: 24px;
+    width: 100%;
+    height: fit-content;
+    min-height: fit-content;
+}
+
+
+.sectionType4 > section > section:last-child > p{
+    width: 60vw;
+}
+
+
+.doubleTextSideWhite{
+    padding: 64px 2.5vw;
+}
+
+
+.fullHeight{
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+.doubleRightTextWhite, .doubleLeftTextWhite {
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+
+.doubleRightTextWhite .sectionType4 > section > section:last-child, .doubleLeftTextWhite .sectionType4 > section > section:last-child{
+    height: fit-content;
+    min-height: fit-content;
+    gap: 24px;
+}
+
+.overlay{
+    padding: 100vw;
+}
+
+.overlay2{
+    width: 95vw;
+    left: 2.5vw;
+}
+
+.fullImage3{
+    width: 95vw;
+    padding: 16px;
+}
+
+
+.doubleLeftTextWhite .sectionType4 > section{
+    flex-direction: column;
+}
+
+footer{
+    height: fit-content;
+    width: 100vw;
+    padding: 64px 2.5vw;
+}
+
+footer > section{
+    flex-direction: column;
+    gap: 40px;
+    height: fit-content;
+}
+
+
+
+footer > section > section{
+    height: fit-content;
+    gap: 24px;
+}
+
+
+
+footer > section > section:first-child h2{
+    width: 70%;
+} 
+
+
+footer > section > section:last-child{
+    .limitParagraph2{
+        width: 50vw;
+        max-width: 300px;
+    }
+}
+
+}
+
+
+
+@media screen and (max-width: 430px) {
+
+    nav{
+        height: 56px;
+        padding: 0 16px;
+    }
+
+
+    nav > a:first-child{
+        font-size: 16px;
+    }
+
+    .hero1, .hero2{
+        padding: 80px 16px 64px 16px;
+    }
+
+    .hero2 > section:first-child{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .hero2 .title2{
+        width: 100%;
+        max-width: fit-content;
+    }
+
+    .limitParagraph1{
+        width: 80vw;
+        max-width: 320px;
+    }
+
+    .hero2 > .horizontalList{
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .horizontalList > section{
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .fullHeight, .fullHeightPadded{
+        padding: 64px 16px;
+    }
+
+
+    .fullImage3{
+        width: calc(100vw - 32px);
+    }
+
+    .singleLeftText{
+        padding: 64px 16px;
+    }
+
+    .doubleTextSide, .doubleTextSideWhite{
+        padding: 64px 16px;
+    }
+
+    .doubleRightText{
+        padding: 64px 16px;
+    }
+
+    
+    .doubleRightTextWhite, .doubleLeftTextWhite{
+        padding: 64px 16px;
+    }
+
+
+    .limitParagraph3{
+        width: 100%;
+        max-width: fit-content;
+    }
+
+
+    .sectionType1, .sectionType2{
+        width: calc(100vw - 32px);
+    }
+
+
+    .sectionType1 > section:first-child, .sectionType1 > section:last-child{
+        width: calc(100vw - 32px);
+    }
+
+
+    .sectionType1 > section:first-child{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .title1{
+        width: calc(100vw - 32px);
+        max-width: none;
+        min-width: calc(100vw - 32px);
+    }
+
+    .sectionType4 > section > section:last-child {
+        gap: 32px;
+    }
+
+    .sectionType4 > section > section:last-child > p {
+        width: 80vw;
+    }
+
+    .sectionType3 .title2{
+        width: calc(100vh - 32px);
+        max-width: fit-content;
+        align-items: start;
+    }
+
+    .sectionType3 .title2 h2{
+        text-align: left;
+    }
+
+
+    .overlay2{
+        width: calc(100vw - 32px);
+        left: 16px;
+    }
+
+    .menuPage > section:last-child{
+        width: calc(100vw - 32px);
+    }
+
+
+
+    footer > section > section:first-child h2 {
+        width: 100%;
+    }
+
+    footer{
+        padding: 64px 16px;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+
+    .dynamicHeading{
+        height: 54px;
+    }
+    
+    .dynamicHeading > span{
+        min-width: calc(100vh - 32px);
+    }
+        
+        
+        @keyframes swapHeading{
+            from{
+                transform: translateY(0) ;
+            }
+    
+            to{
+                transform: translateY(calc(-270px));
+            }
+        }
+
+        .hero1 > section:first-of-type section:first-child {
+            width: calc(100vw - 16px);
+        }
+
+        .sectionType4 > section > section:first-child section{
+            width: calc(100vw - 32px);
+            min-width: calc(100vw - 32px);
+        }
+    
+}
+
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-size: 24px;
+    
+    }
+    
+    h2{
+
+        font-size: 20px;
+    
+    }
+    
+    
+    
+    h3{
+        font-size: 16px;
+        
+    }
+    
+    
+    h4{
+        font-size: 14px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    
+    li{
+        font-size: 10px;
+    }
+
+
+    .dynamicHeading{
+        height: 36px;
+    }
+    
+    .dynamicHeading > span{
+        min-width: calc(100vh - 32px);
+    }
+        
+        
+        @keyframes swapHeading{
+            from{
+                transform: translateY(0) ;
+            }
+    
+            to{
+                transform: translateY(calc(-180px));
+            }
+        }
+}

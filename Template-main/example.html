@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+    </head>
+    <body>
+        <style> 
+            .se {
+                height: 500vh;
+                border: 1px solid rgb(0, 127, 255);
+            }
+            .slider {
+                height: 100vh;
+                border: 1px solid rgb(255, 0, 0);
+
+                background-color: rgb(0, 255, 0);
+                overflow: scroll;
+                display: flex;
+                width: 100%;
+            }
+            .stick{
+               position: sticky;
+                top: 0px;
+                left: 0px;
+            }
+            .slide {
+                border: 1px solid rgb(255, 255, 0);
+                background-color: rgb(192, 192, 192);
+                min-width: 70vw;
+            }
+        </style>
+        <section>section 1</section>
+        <section class="se">
+            section sticky
+            <section class="stick">
+            <h1>h1</h1>
+            <div class="slider">
+                slider
+                <section class="slide">slide 1</section>
+                <section class="slide">slide 2</section>
+                <section class="slide">slide 3</section>
+            </div>
+            </section>
+        </section>
+        <section>section</section>
+        <section class="se">section</section>
+        <section>section</section>
+        <section class="se">section</section>
+    </body>
+</html>
