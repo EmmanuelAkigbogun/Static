@@ -635,15 +635,17 @@ main > section, footer{
 
 
 .stickyParent{
-    height: 500vh;
-    min-height: fit-content;
+   height: 420vh;
 }
+.stickyParent1{
+   height: 550vh;
+}
+
 .stickyHeight{
     position: sticky;
     top:0;
     left: 0;
 }
-
 
 .swapSection{
     display: flex;
@@ -673,19 +675,11 @@ main > section, footer{
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(5);
+    
 }
 
 
 
-@keyframes swapSectionAnimate {
-    from{
-        transform: translateX(0%);
-    }
-
-    to{
-        transform: translateX(-100%);
-    }
-}
 
 
 .sectionType1{
@@ -752,7 +746,6 @@ main > section, footer{
 .singleLeftText{
     width: calc(100vw - 16px);
     padding: 64px 5vw;
- 
 }
 
 
