@@ -332,10 +332,16 @@ nav button img{
 .nav_img {
   content: url(Images/menu_white.svg);
 }
+.close_img {
+  content: url(Images/close.svg);
+}
 .white {
   animation: white_color linear;
   animation-range: contain;
   animation-timeline: view(0vh 100vh);
+}
+.white_color{
+    color: white;
 }
 @keyframes white_color {
   from {
@@ -358,14 +364,14 @@ nav button p{
     mix-blend-mode: var(--blend);
 }
 
-.open{
-    display: flex;
-}
+
 
 .close{
     display: none;
 }
-
+.open{
+    display: flex;
+}
 .menuPage{
     flex-direction: column;
     justify-content: space-between;

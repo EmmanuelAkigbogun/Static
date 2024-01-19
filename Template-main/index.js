@@ -70,3 +70,18 @@ window.onscroll = () => {
   }
   val = false;
 };
+img.onclick = () => {
+   if(img.classList.contains("close_img")){
+      nav.classList.remove("white_color");
+      menu.classList.remove("white_color");
+      img.classList.remove("close_img");
+      menu_page.classList.remove("open");
+      menu_page.classList.add("close");
+   }
+   else{
+  nav.classList.add("white_color");
+  menu.classList.add("white_color");
+  img.classList.add("close_img");
+  menu_page.classList.add("open")
+}
+};
